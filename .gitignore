@@ -13,7 +13,6 @@ dist-ssr
 *.local
 
 # Editor directories and files
-!.vscode/extensions.json
 .idea
 .DS_Store
 *.suo
@@ -24,3 +23,6 @@ dist-ssr
 *.pem
 # env files (can opt-in for committing if needed)
 .env*
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
