@@ -1,0 +1,45 @@
+// User Permission types
+export interface PermissionUser {
+  id: string;
+  email: string;
+  username: string;
+  password?: string;
+  googleId: string | null;
+  phone: string | null;
+  name: string;
+  avatarUrl: string;
+  country: string | null;
+  city: string | null;
+  state: string | null;
+  zip: string | null;
+  role: 'SUPER_ADMIN' | 'ADMIN';
+  status: string;
+  isLoggedIn: boolean;
+  lastLoginAt: string | null;
+  lastLogoutAt: string | null;
+  lastActiveAt: string | null;
+  isVerified: boolean;
+  otp: string | null;
+  otpExpiresAt: string | null;
+  otpType: string | null;
+  stripeCustomerId: string | null;
+  currentPlanId: string | null;
+  currentPlanStatus: string | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface CreateAdminRequest {
+  email: string;
+  username: string;
+  password: string;
+  name: string;
+  role: 'SUPER_ADMIN' | 'ADMIN';
+  googleId?: string;
+  avatarUrl?: string;
+  isVerified?: boolean;
+}
+
+export interface UpdateRoleRequest {
+  role: 'SUPER_ADMIN' | 'ADMIN';
+}

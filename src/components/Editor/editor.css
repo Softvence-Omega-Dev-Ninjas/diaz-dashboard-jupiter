@@ -1,0 +1,389 @@
+/* Rich Text Editor Styles */
+.rich-text-editor-wrapper {
+  width: 100%;
+}
+
+.rich-text-editor-wrapper .quill {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.rich-text-editor-wrapper .ql-toolbar {
+  border-bottom: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.rich-text-editor-wrapper .ql-container {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  font-family: inherit;
+}
+
+.rich-text-editor-wrapper .ql-editor {
+  color: #111827;
+  font-size: 1rem;
+  min-height: inherit;
+}
+
+.rich-text-editor-wrapper .ql-editor.ql-blank::before {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Toolbar buttons */
+.rich-text-editor-wrapper .ql-toolbar button {
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.rich-text-editor-wrapper .ql-toolbar button:hover {
+  color: #2563eb;
+}
+
+.rich-text-editor-wrapper .ql-toolbar button.ql-active {
+  color: #2563eb;
+}
+
+/* Toolbar stroke colors */
+.rich-text-editor-wrapper .ql-stroke {
+  stroke: #4b5563;
+}
+
+.rich-text-editor-wrapper .ql-toolbar button:hover .ql-stroke,
+.rich-text-editor-wrapper .ql-toolbar button.ql-active .ql-stroke {
+  stroke: #2563eb;
+}
+
+.rich-text-editor-wrapper .ql-fill {
+  fill: #4b5563;
+}
+
+.rich-text-editor-wrapper .ql-toolbar button:hover .ql-fill,
+.rich-text-editor-wrapper .ql-toolbar button.ql-active .ql-fill {
+  fill: #2563eb;
+}
+
+/* Picker labels */
+.rich-text-editor-wrapper .ql-picker-label {
+  color: #4b5563;
+}
+
+.rich-text-editor-wrapper .ql-picker-label:hover {
+  color: #2563eb;
+}
+
+/* Focus state */
+.rich-text-editor-wrapper .quill:focus-within {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+    calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow:
+    var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+    var(--tw-shadow, 0 0 #0000);
+  --tw-ring-opacity: 0.5;
+  --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
+  border-color: #3b82f6;
+}
+
+/* Read-only state */
+.rich-text-editor-wrapper .ql-container.ql-disabled {
+  background-color: #f9fafb;
+}
+
+.rich-text-editor-wrapper .ql-editor.ql-disabled {
+  cursor: not-allowed;
+}
+
+/* Custom scrollbar for editor */
+.rich-text-editor-wrapper .ql-editor {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 #f7fafc;
+}
+
+.rich-text-editor-wrapper .ql-editor::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.rich-text-editor-wrapper .ql-editor::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+}
+
+.rich-text-editor-wrapper .ql-editor::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 9999px;
+}
+
+.rich-text-editor-wrapper .ql-editor::-webkit-scrollbar-thumb:hover {
+  background-color: #9ca3af;
+}
+/* Editor Preview Styles - matches editor output exactly */
+.editor-preview-container {
+  width: 100%;
+}
+
+.editor-preview-container .ql-editor {
+  font-family: inherit;
+  color: #111827;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* Reset default margins for preview */
+.editor-preview-container .ql-editor * {
+  margin: 0;
+  padding: 0;
+}
+
+/* Paragraph spacing */
+.editor-preview-container .ql-editor p {
+  margin-bottom: 1em;
+  line-height: 1.75;
+}
+
+/* Headings */
+.editor-preview-container .ql-editor h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+.editor-preview-container .ql-editor h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+.editor-preview-container .ql-editor h3 {
+  font-size: 1.75em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+}
+
+.editor-preview-container .ql-editor h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+.editor-preview-container .ql-editor h5 {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+.editor-preview-container .ql-editor h6 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+/* Lists */
+.editor-preview-container .ql-editor ul,
+.editor-preview-container .ql-editor ol {
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.editor-preview-container .ql-editor ul {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.editor-preview-container .ql-editor ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+
+.editor-preview-container .ql-editor li {
+  margin-bottom: 0.5em;
+  line-height: 1.75;
+  display: list-item;
+  list-style: inherit;
+  padding-left: 0.5em;
+}
+
+.editor-preview-container .ql-editor li::marker {
+  color: #111827;
+}
+
+.editor-preview-container .ql-editor li > ul,
+.editor-preview-container .ql-editor li > ol {
+  margin-top: 0.5em;
+}
+
+/* Nested lists */
+.editor-preview-container .ql-editor ul ul {
+  list-style-type: circle;
+}
+
+.editor-preview-container .ql-editor ul ul ul {
+  list-style-type: square;
+}
+
+/* Text formatting */
+.editor-preview-container .ql-editor strong {
+  font-weight: bold;
+}
+
+.editor-preview-container .ql-editor em {
+  font-style: italic;
+}
+
+.editor-preview-container .ql-editor u {
+  text-decoration: underline;
+}
+
+.editor-preview-container .ql-editor s {
+  text-decoration: line-through;
+}
+
+/* Blockquotes */
+.editor-preview-container .ql-editor blockquote {
+  border-left: 4px solid #cbd5e0;
+  padding-left: 1em;
+  margin-left: 0;
+  margin-bottom: 1em;
+  font-style: italic;
+  color: #4b5563;
+}
+
+/* Code blocks */
+.editor-preview-container .ql-editor pre {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  padding: 1em;
+  border-radius: 0.375rem;
+  margin-bottom: 1em;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+}
+
+.editor-preview-container .ql-editor code {
+  background-color: #f1f5f9;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.editor-preview-container .ql-editor pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+/* Links */
+.editor-preview-container .ql-editor a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.editor-preview-container .ql-editor a:hover {
+  color: #1d4ed8;
+}
+
+/* Images */
+.editor-preview-container .ql-editor img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+  border-radius: 0.375rem;
+}
+
+/* Alignment classes from Quill */
+.editor-preview-container .ql-editor .ql-align-center {
+  text-align: center;
+}
+
+.editor-preview-container .ql-editor .ql-align-right {
+  text-align: right;
+}
+
+.editor-preview-container .ql-editor .ql-align-justify {
+  text-align: justify;
+}
+
+/* Indentation classes from Quill */
+.editor-preview-container .ql-editor .ql-indent-1 {
+  padding-left: 3em;
+}
+
+.editor-preview-container .ql-editor .ql-indent-2 {
+  padding-left: 6em;
+}
+
+.editor-preview-container .ql-editor .ql-indent-3 {
+  padding-left: 9em;
+}
+
+.editor-preview-container .ql-editor .ql-indent-4 {
+  padding-left: 12em;
+}
+
+.editor-preview-container .ql-editor .ql-indent-5 {
+  padding-left: 15em;
+}
+
+.editor-preview-container .ql-editor .ql-indent-6 {
+  padding-left: 18em;
+}
+
+.editor-preview-container .ql-editor .ql-indent-7 {
+  padding-left: 21em;
+}
+
+.editor-preview-container .ql-editor .ql-indent-8 {
+  padding-left: 24em;
+}
+
+/* Font sizes from Quill */
+.editor-preview-container .ql-editor .ql-size-small {
+  font-size: 0.75em;
+}
+
+.editor-preview-container .ql-editor .ql-size-large {
+  font-size: 1.5em;
+}
+
+.editor-preview-container .ql-editor .ql-size-huge {
+  font-size: 2.5em;
+}
+
+/* Direction */
+.editor-preview-container .ql-editor .ql-direction-rtl {
+  direction: rtl;
+  text-align: inherit;
+}
+
+/* Video */
+.editor-preview-container .ql-editor iframe {
+  max-width: 100%;
+  margin-bottom: 1em;
+  border-radius: 0.375rem;
+}
+
+/* Subscript and superscript */
+.editor-preview-container .ql-editor sub {
+  vertical-align: sub;
+  font-size: 0.75em;
+}
+
+.editor-preview-container .ql-editor sup {
+  vertical-align: super;
+  font-size: 0.75em;
+}

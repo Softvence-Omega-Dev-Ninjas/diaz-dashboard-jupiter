@@ -1,0 +1,10 @@
+services:
+  frontend:
+    platform: linux/amd64
+    image: softvence/diaz_floridayt_admin:latest
+    container_name: floridayt_admin
+    environment:
+      - VITE_BASE_URL=https://development.floridayachttrader.com
+    ports:
+      - "4173:4173"
+    restart: always
